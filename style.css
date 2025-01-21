@@ -14,7 +14,7 @@ header a{
     text-decoration: none;
     font-size: 20px;
 }
-@keyframes rotatelogo{
+@keyframes movelogo{
     0%{
         transform: translateX(0%);
     }
@@ -27,7 +27,7 @@ header a{
     }
 }
 .navbar img{
-  animation-name: rotatelogo;
+  animation-name: movelogo;
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -354,4 +354,108 @@ h2{
   .footer-links a:hover {
     text-decoration: underline;
   }
-  
+  @media (max-width : 480px) {
+    .navbar img{
+        display: none;
+      }
+  }
+@media (max-width: 480px) {
+    .navbar img {
+        display: none;
+    }
+    header {
+        /* height: 80px; Reduce header size for smaller screens */
+    }
+    header a {
+        font-size: 15x; /* Make links smaller on small screens */
+    }
+
+    .aboutbatman {
+        font-size: 10px; /* Adjust font size for smaller screens */
+    }
+
+    .batabout {
+        width: 90%; /* Make text area wider */
+    }
+
+    .batimg {
+        width: 90%; /* Adjust image size */
+    }
+
+    .films {
+        height: auto; /* Allow films section to adjust height */
+    }
+
+    .filmcards {
+        flex-direction: column; /* Stack film cards vertically */
+    }
+
+    .cards img {
+        width: 100%; /* Adjust image size to fit small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .joker {
+        flex-direction: column; /* Stack Joker section content */
+    }
+
+    .jokerabout {
+        width: 90%; /* Make text area wider */
+    }
+
+    .jokerimg {
+        width: 90%; /* Adjust image size */
+    }
+}
+
+@media (max-width: 760px) {
+    .navbar img {
+        display: none; /* Hide logo on medium-sized screens */
+    }
+
+    header {
+        height: 90px; /* Adjust header size */
+    }
+
+    header a {
+        font-size: 18px; /* Adjust link font size */
+    }
+    .aboutbatman {
+        font-size: 18px; /* Adjust font size */
+       display: block;
+        flex-direction: column;
+    }
+
+    .batabout {
+        width: 80%; /* Adjust width of text box */
+    }
+
+    .batimg {
+        width: 30%; /* Adjust width of images */
+    }
+    .films {
+        height: auto; /* Allow films section to adjust height */
+    }
+
+    .filmcards {
+        flex-direction: column-reverse; /* Keep cards in row but adjust spacing */
+        padding: 10px 0;
+    }
+
+    .cards img {
+        width: 100%; /* Adjust image size */
+        height: auto;
+    }
+
+    .joker {
+        flex-direction: column; /* Stack content */
+    }
+
+    .jokerabout {
+        width: 80%; /* Adjust width of text area */
+    }
+
+    .jokerimg {
+        width: 40%; /* Adjust width of images */
+    }
+}
