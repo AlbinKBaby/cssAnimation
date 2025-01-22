@@ -357,29 +357,40 @@ ul  {
   }
   /* Media Query for max-width 480px */
 @media (max-width: 480px) {
-    /* Header adjustments */
-    header img{
-        display: none;
-
+    @keyframes spinlogo{
+        0%{
+            transform: rotateY(0deg);
+        }
+        50%{
+            transform: rotateY(180deg);
+        }
+        100%{
+            transform: rotateY(0deg);
+        }
     }
-
-    header a{
+    .navbar img{
+      animation-name: spinlogo;
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+    }
+    .navbar a{  
         font-size: 18px;
         margin: 5px 0;
     }
-
-    ul{
+    .navbar ul{
+      
        display: flex;
-       justify-content: space-between;
+       justify-content: center;
         align-items: center;
-        /* margin: 10px; */
     }
 
     .navbar ul li{
         font-size: 16px;
-        margin: 5px 20px;
-        padding: 5px;
+     margin-top: 5px;
+        padding: 0px;
     }
+
 
     /* Batman Section adjustments */
     .aboutbatman{
@@ -411,7 +422,6 @@ ul  {
         height: 100%;
         width: 100%;
     }
-    /* Joker Section adjustments */
     .joker{
         height: auto;
         width: 100%;
