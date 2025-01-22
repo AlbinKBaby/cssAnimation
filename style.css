@@ -2,14 +2,14 @@ body{
     margin: 0;
     overflow-x: hidden;
 }
-header{
+.navbar{
     height: 100px;
     width: 100%;
     background: linear-gradient(to right, rgb(26, 26, 68), rgba(12, 14, 46, 0.753));
     display: flex;
     justify-content: space-between;
 }
-header a{
+.navbar a{
     color: white;
     text-decoration: none;
     font-size: 20px;
@@ -26,20 +26,21 @@ header a{
      transform: translateX(0%);
     }
 }
-.navbar img{
-  animation-name: movelogo;
+.logo img{
+  height: 100%;
+    animation-name: movelogo;
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-ul  {
+.list ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-right: 20px;
 }
 
-.navbar ul li{
+.list ul li{
     list-style-type: none;
     color: rgb(0, 0, 0);
     margin: 10px;
@@ -252,7 +253,7 @@ ul  {
     justify-content: space-evenly;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
-    background: linear-gradient(rgb(6, 78, 6), rgb(3, 5, 4));
+    background: linear-gradient(to top , rgb(5, 22, 5), rgb(1, 8, 15));
 }
 
 .jokerabout {
@@ -357,6 +358,12 @@ ul  {
   }
   /* Media Query for max-width 480px */
 @media (max-width: 480px) {
+   .navbar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
     @keyframes spinlogo{
         0%{
             transform: rotateY(0deg);
@@ -368,31 +375,31 @@ ul  {
             transform: rotateY(0deg);
         }
     }
-    .navbar img{
+    .logo img{
+        width: 100%;
       animation-name: spinlogo;
       animation-duration: 5s;
       animation-timing-function: ease-in-out;
       animation-iteration-count: infinite;
     }
-    .navbar a{  
+    .list a{  
         font-size: 18px;
         margin: 5px 0;
     }
-    .navbar ul{
-      
+    .list ul{
+       width: 80%;
+        padding: 0px;
        display: flex;
        justify-content: center;
         align-items: center;
     }
 
-    .navbar ul li{
+    .list ul li{
         font-size: 16px;
-     margin-top: 5px;
-        padding: 0px;
+     margin-top: 15px;
+        padding: 5px;
     }
 
-
-    /* Batman Section adjustments */
     .aboutbatman{
         height: auto;
         width: 100%;
@@ -401,14 +408,7 @@ ul  {
         display: flex;
         flex-direction: column;
        
-    }
-    .batabout{
-        width: 80%;
-        height: auto;
-        margin: 20px 0;
-        padding: 10px;
-    }
-
+   }
     .batimg{
         width: 100%;
         height: 90vh;
@@ -419,8 +419,9 @@ ul  {
     }
 
     .batimg img{
-        height: 100%;
-        width: 100%;
+        padding: 10px 40px  ;
+        height: 80%;
+        width: 80%;
     }
     .joker{
         height: auto;
@@ -461,13 +462,20 @@ ul  {
         align-items: center;
     }
     .filmcards{
-        width: 60%;
+        width: 100%;
         padding: 10px 5px;
         flex-direction: column;
     }
+    .cards{
+       width: 60%;
+       height: 60%;
+        margin: 20px 20px;
+        padding: 10px 10px;
+    }
     .cards img{
         margin-top: 20px;
-        width: 100%;
+
+        width: 80%;
         height: auto;
         border: 5px solid;
     }
@@ -482,5 +490,59 @@ ul  {
     }
     .footer-links li{
         margin: 10px 0;
+    }
+}
+@media( max-width: 768px){
+
+    body{
+        width: 100%;
+        margin: 0px;
+    }
+    .aboutbatman {
+        background-image: url(https://images.squarespace-cdn.com/content/v1/51b3dc8ee4b051b96ceb10de/d1d68dd9-bd61-4900-9d05-64d124f6494a/FanAnimatedBatman.jpg);
+        background-attachment: cover;
+        background-position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        display: flex;
+        margin: 0px;
+        justify-content: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+    }
+    .batabout {
+        width: 60%;
+      height: 85%;
+        /* margin: 25px 20px; */
+        padding: 15px 5px;
+        color: white;
+        background-color: rgba(41, 37, 37, 0.493);
+    }
+    .films{
+        width: 100%;
+        height: auto;
+        display:grid;
+        flex-wrap: wrap;
+        justify-content: space-around ;
+        align-items: center;
+    }
+    .filmcards{
+        width: 100%;
+        padding: 10px 5px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .joker{
+        height: auto;
+        width: 100%;
+    }
+    .jokerabout {
+        width: 80%;
+      height: auto;
+        /* margin: 25px 20px; */
+        padding: 15px 5px;
+        color: white;
+        background-color: rgba(41, 37, 37, 0.493);
     }
 }
