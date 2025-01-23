@@ -356,8 +356,8 @@ body{
   .footer-links a:hover {
     text-decoration: none;
   }
-  /* Media Query for max-width 480px */
-@media (max-width: 560px) {
+
+@media (max-width: 768px) {
    .navbar{
     width: 100%;
     display: flex;
@@ -489,59 +489,5 @@ body{
     }
     .footer-links li{
         margin: 10px 0;
-    }
-}
-@media( max-width: 768px){
-
-    body{
-        width: 100%;
-        margin: 0px;
-    }
-    .aboutbatman {
-        background-image: url(https://images.squarespace-cdn.com/content/v1/51b3dc8ee4b051b96ceb10de/d1d68dd9-bd61-4900-9d05-64d124f6494a/FanAnimatedBatman.jpg);
-        background-attachment: cover;
-        background-position: relative;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        display: flex;
-        margin: 0px;
-        justify-content: center;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 20px;
-    }
-    .batabout {
-        width: 60%;
-      height: 85%;
-        /* margin: 25px 20px; */
-        padding: 15px 5px;
-        color: white;
-        background-color: rgba(41, 37, 37, 0.493);
-    }
-    .films{
-        width: 100%;
-        height: auto;
-        display:grid;
-        flex-wrap: wrap;
-        justify-content: space-around ;
-        align-items: center;
-    }
-    .filmcards{
-        width: 100%;
-        padding: 10px 5px;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .joker{
-        height: auto;
-        width: 100%;
-    }
-    .jokerabout {
-        width: 80%;
-      height: auto;
-        /* margin: 25px 20px; */
-        padding: 15px 5px;
-        color: white;
-        background-color: rgba(41, 37, 37, 0.493);
     }
 }
